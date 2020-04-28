@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.05em
+}
+*:focus {
+    outline-color: #be3908;
+}
+
+body, html {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+:root {
+    --primary: #eb4d55;
+    --secondary: #333366;
+    --linear: background-image: linear-gradient(to right, #000025, #000025);
+}
+
+.toggle-nav {
+    display: none;
+}
+
+header {
+    background: var(--secondary);
+    box-shadow: 0px 0px 30px 4px rgba(0,0,0,0.5);
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 4rem;
+    margin: 0 ;
+}
+nav .nav-items{
+    display: flex;
+    list-style: none;
+}
+.nav-links .nav-link {
+    color: #fff;
+    font-size: 1.1em;
+    text-transform: capitalize;
+    font-weight: 500;
+    transition: all 2s ease-in-out;
+    margin: 0 em;
+}
+.nav-links .nav-link:hover{
+    border-bottom: solid 1px #fff;
+    border-left: solid 1px #fff;
+}
+header nav .branding{
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    cursor: pointer;
+    color: #eee;
+    font-size: 2.5em;
+}
+
+nav .branding span {
+  font-weight: bold;
+  color: var(--primary); 
+  font-size: 2rem;
+}
+.branding {
+  border-left: solid 2px #eee;
+  border-top: dashed 2px #eee;
+  padding-left: 10px;
+}
+header .top-head {
+    display: flex;
+    justify-content: space-between;
+    background: #f6e1e1;
+    padding-top: 1em;
+    padding-left: 4em;
+    padding-right: 4em;
+    font-weight: bold;
+}
+
+header .top-head a {
+    color: #333;
+}
+.top-head span {
+  color: #333;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 4px;
+  margin: 0 0.3rem;
+}
+.top-head span:hover {
+    cursor: pointer;
+}
+
+
+/* Landing Page
+============================================== */
+#landing {
+  background-image: url('../img/slider/slider.jpg');
+  background-position: center;
+  background-size: cover; 
+  width: 100%;
+  height: 600px;
+  padding: 2em;
+  position: relative;
+  box-shadow: 2px 2px 9px rgba(0,0,0,0.5);
+}
+#landing .overlay {
+  background: #024b552d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+#landing .text-container{
+  width: 50%;
+  margin: 10% auto;
+  text-align: center;
+  z-index: 2;
+}
+
+#landing .text-container h1, h4 {
+  font-weight: 700;
+}
+#landing .text-container h4 {
+  margin-bottom: 1em;
+}
+
+#landing .text-container .button {
+  margin: 2em 0;
+  display: flex;
+  flex-direction: row;
+}
+
+#landing .text-container a{
+  border-radius: 30px;
+  background: #fff;
+  color: #be3908;
+  text-decoration: none;
+  padding: 15px 20px;
+  margin-top: 1em;
+  white-space: nowrap;
+}
+
+#header {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  text-align: center;
+  font-weight: 700;
+  font-size: 2em;
+  position: relative;
+}
+/* #header::before{
+  content: '';
+  width: 80px;
+  height: 3px;
+  background: #be3908;
+  position: absolute;
+  top: 1.3em;
+  border-radius: 30px;
+} */
+
+
+
+.section-1 {
+  padding: 2rem 0;
+}
+
+.about h4 {
+  position: relative;
+}
+
+.about h4::before {
+  content: '';
+  width: 50px;
+  height: 3px;
+  background: #be3908;
+  position: absolute;
+  top: 1.3em;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.top-service {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.top-service .box {
+  padding: 20px;
+  text-align: center;
+  border: solid 1px #333366;
+  width: 200px;
+  margin: 2em auto;
+}
+.top-service .box .fab, .fas {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  color: #504f4f;
+}
+.about .btn-learn{
+  text-align: center;
+  padding: 5px 30px;
+  margin: 0.5em 0;
+  text-decoration: none;
+  color: #333366;
+  border: solid 1px #333366;
+}
+
+
+@media all and (max-width: 800px) {
+
+
+  .nav-items.show {
+    position: fixed;
+    color: #fff !important;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 40%;
+    text-align: center;
+    background: #333366f3;
+    padding-top: 3rem;
+    transform: translate3d(0, 0, 0);
+    transition: all 5s ease-in-out;
+    z-index: 1;
+  }
+
+  .nav-link {
+    color: #fff !important;
+    margin: 1rem 0;
+  }
+
+  .close {
+    transform: rotate(180deg);
+  }
+
+  .close .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .close .line:nth-child(2) {
+  opacity: 0;
+  }
+  .close .line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+
+  nav .nav-items{
+    transform: translateX(-100%);
+    transition: all 2s ease-in-out;
+  }
+
+  #landing {
+    height: 400px;
+  }
+  
+  #landing .text-container{
+    width: 100%;
+    margin: 5% auto;
+    text-align: center;
+    z-index: 1;
+    font-size: 1em;
+  }
+  #landing .text-container h1 {
+    font-size: 2em;
+  }
+  #landing .text-container h4 {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+  }
+  #landing .text-container .button {
+    margin: 1em 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #landing .text-container .button button {
+    padding: 10px 30px;
+    margin-bottom: 1em;
+    white-space: nowrap;
+    border-radius: 3px;
+  }
+
+  header nav .branding{
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold;
+    cursor: pointer;
+    color: #eee;
+    font-size: 1.5em;
+  }
+
+  header nav {
+    padding: 0.5em 1em;
+  }
+
+  nav .branding span {
+    font-weight: bold;
+    color: var(--primary); 
+    font-size: 1em;
+  }
+
+  header nav .nav-items {
+    display: none;
+  }
+
+  header .top-head {
+    display: none;
+  }
+  header nav .toggle {
+    position: absolute;
+    right: 5%;
+    transition: all 1s ease-in-out;
+    margin-right: 10px;
+  }
+  
+  .line{
+    width: 30px;
+    background: #eee;
+    height: 3px;
+    margin: 5px;
+    transition: all 1s ease-in-out;
+  }
+
+}
+
+
